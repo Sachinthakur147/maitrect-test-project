@@ -133,7 +133,9 @@ const LoginIndex = () => {
                   });
                 }}
               >
-                Login
+                <Link to="/dashboard" style={{color: "white"}}>
+                  Login
+                </Link>
               </Button>
             </div>
           </div>
