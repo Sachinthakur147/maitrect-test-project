@@ -121,10 +121,12 @@ const LoginIndex = () => {
                 variant="contained"
                 style={{fontSize: "16px", fontWeight: "500"}}
                 onClick={() => {
+                  console.log(isFood);
                   submitHandler();
                   setIsFood((preval) => {
                     return {
                       ...preval,
+
                       email: "",
                       password: "",
                     };
