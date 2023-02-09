@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maitrect-test-project/static/css/main.e5dfaf7d.css",
-    "main.js": "/maitrect-test-project/static/js/main.a3cd4a81.js",
+    "main.js": "/maitrect-test-project/static/js/main.31885657.js",
     "static/js/787.28cb0dcd.chunk.js": "/maitrect-test-project/static/js/787.28cb0dcd.chunk.js",
     "static/media/pepsi.jpeg": "/maitrect-test-project/static/media/pepsi.6efe5ca933f40734c898.jpeg",
     "static/media/burger.jpeg": "/maitrect-test-project/static/media/burger.a264aebc643407f64b08.jpeg",
@@ -9,11 +9,11 @@
     "static/media/coke.jpeg": "/maitrect-test-project/static/media/coke.100662047528b053f85e.jpeg",
     "index.html": "/maitrect-test-project/index.html",
     "main.e5dfaf7d.css.map": "/maitrect-test-project/static/css/main.e5dfaf7d.css.map",
-    "main.a3cd4a81.js.map": "/maitrect-test-project/static/js/main.a3cd4a81.js.map",
+    "main.31885657.js.map": "/maitrect-test-project/static/js/main.31885657.js.map",
     "787.28cb0dcd.chunk.js.map": "/maitrect-test-project/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e5dfaf7d.css",
-    "static/js/main.a3cd4a81.js"
+    "static/js/main.31885657.js"
   ]
 }
