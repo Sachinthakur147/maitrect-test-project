@@ -60,7 +60,7 @@ const LoginIndex = () => {
             textAlign: "center",
           }}
         >
-          <div className="page-heading" style={{marginRight: "10%"}}>
+          <div className="page-heading" style={{marginRight: "0%"}}>
             Login
           </div>
 

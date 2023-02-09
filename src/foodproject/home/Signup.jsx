@@ -60,7 +60,7 @@ const SignUpIndex = () => {
             textAlign: "center",
           }}
         >
-          <div className="page-heading" style={{marginRight: "10%"}}>
+          <div className="page-heading" style={{marginRight: "0%"}}>
             Sing Up
           </div>
           <div
