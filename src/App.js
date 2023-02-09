@@ -6,22 +6,25 @@ import LoginIndex from "./foodproject/home/login";
 import Dashboard from "./foodproject/dashboard/Dashboard";
 import Menupage from "./foodproject/dashboard/Menucard";
 import OCpage from "./foodproject/dashboard/OCpage";
+import MyProvider from "../src/context/provider";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route>
-          <Route path="/" element={<SignUpIndex />} />
-          <Route path="/home" element={<NavIndex />} />
-          <Route path="/Signup" element={<SignUpIndex />} />
-          <Route path="/Login" element={<LoginIndex />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/menu" element={<Menupage />} />
-          <Route path="/orderplace" element={<OCpage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <MyProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route>
+            <Route path="/" element={<SignUpIndex />} />
+            <Route path="/home" element={<NavIndex />} />
+            <Route path="/Signup" element={<SignUpIndex />} />
+            <Route path="/Login" element={<LoginIndex />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/menu" element={<Menupage />} />
+            <Route path="/orderplace" element={<OCpage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </MyProvider>
     // <NavIndex />
   );
 }

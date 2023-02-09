@@ -10,7 +10,7 @@ import "../home/Hstyle.css";
 import NavIndex from "../home/Navindex";
 import {Box} from "@mui/system";
 
-const CardIndex = ({data, setOrderDetails}) => {
+const CardIndex = ({data, setOrderDetails, orderDetails}) => {
   const [num, setNum] = useState(0);
 
   const incNum = () => {
@@ -31,7 +31,7 @@ const CardIndex = ({data, setOrderDetails}) => {
   };
 
   useEffect(() => {
-    setOrderDetails((orderDetails) => {
+    const tempOrderDetails = () => {
       const isFoodAddedToCart =
         orderDetails.filter((food) => food.id === data.id).length > 0;
       if (isFoodAddedToCart) {
@@ -44,7 +44,8 @@ const CardIndex = ({data, setOrderDetails}) => {
       } else {
         return [...orderDetails, {...data, qty: num}];
       }
-    });
+    };
+    setOrderDetails(tempOrderDetails());
   }, [num]);
 
   return (

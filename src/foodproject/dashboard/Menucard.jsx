@@ -5,31 +5,41 @@ import {foods} from "../constant/mockdata";
 import CardIndex from "../card/Cardindex";
 import NavIndex from "../home/Navindex";
 import DnavIndex from "../home/Dnavbar";
+import MyContext from "../../context/app-context";
 
 const Menupage = () => {
   const [cardData, setCardData] = useState([]);
-  const [orderDetails, setOrderDetails] = useState([]);
   useEffect(() => {
     setCardData(foods);
   }, []);
   return (
     <Box>
-      <DnavIndex orderDetails={orderDetails} />
-      <div className="Home-page-wrraper">
-        <div className="fullpage">
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              justifyContent: "space-around",
-            }}
-          >
-            {cardData.map((card, i) => (
-              <CardIndex setOrderDetails={setOrderDetails} data={card} />
-            ))}
-          </div>
-        </div>
-      </div>
+      <MyContext.Consumer>
+        {(context) => (
+          <>
+            <DnavIndex orderDetails={context.state.orderDetails} />
+            <div className="Home-page-wrraper">
+              <div className="fullpage">
+                <div
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  {cardData.map((card, i) => (
+                    <CardIndex
+                      setOrderDetails={context.setOrderDetails}
+                      orderDetails={context.state.orderDetails}
+                      data={card}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      </MyContext.Consumer>
     </Box>
   );
 };

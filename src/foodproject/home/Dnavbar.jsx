@@ -14,6 +14,7 @@ import "./Hstyle.css";
 import {Link} from "react-router-dom";
 
 const DnavIndex = ({orderDetails}) => {
+  console.log("orderDetails:::", orderDetails);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -93,33 +94,39 @@ const DnavIndex = ({orderDetails}) => {
                       orderDetails.map((order) => {
                         if (order.qty > 0) {
                           return (
-                            <div style={{justifyContent: "space-between"}}>
-                              <span>{order.name}:</span>
-                              <span style={{marginLeft: "100px"}}>
-                                {order.qty}
-                              </span>
-                            </div>
+                            <>
+                              <br />
+                              <div style={{justifyContent: "space-between"}}>
+                                <span>{order.name}:</span>
+                                <span style={{marginLeft: "100px"}}>
+                                  {order.qty}
+                                </span>
+                                <Button
+                                  style={{
+                                    backgroundColor: "blue",
+                                    color: "white",
+                                    marginLeft: "40%",
+                                  }}
+                                >
+                                  +
+                                </Button>
+                                <Button
+                                  style={{
+                                    backgroundColor: "red",
+                                    color: "white",
+                                    marginLeft: "10px",
+                                  }}
+                                >
+                                  -
+                                </Button>
+                              </div>
+                            </>
                           );
                         } else {
                           return null;
                         }
                       })}
-                    <Button
-                      style={{
-                        backgroundColor: "blue",
-                        color: "white",
-                      }}
-                    >
-                      +
-                    </Button>
-                    <Button
-                      style={{
-                        backgroundColor: "red",
-                        color: "white",
-                      }}
-                    >
-                      -
-                    </Button>
+
                     <hr />
                     <div style={{justifyContent: "space-between"}}>
                       <span>{"Total Price"}:</span>
