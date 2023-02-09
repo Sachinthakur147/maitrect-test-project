@@ -61,7 +61,7 @@ const SignUpIndex = () => {
           }}
         >
           <div className="page-heading" style={{marginRight: "0%"}}>
-            Sing Up
+            SignUp
           </div>
           <div
             style={{

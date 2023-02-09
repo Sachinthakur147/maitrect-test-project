@@ -87,17 +87,37 @@ const CardIndex = ({data, setOrderDetails}) => {
             >
               +
             </Button>
-            <Button
-              style={{
-                fontSize: "30px",
-                fontWeight: "500",
-                marginTop: "5%",
-                backgroundColor: "lightgrey",
-              }}
-              onClick={decNum}
-            >
-              -
-            </Button>
+            {num > 0 && (
+              <>
+                <Button
+                  style={{
+                    fontSize: "30px",
+                    fontWeight: "500",
+                    marginTop: "5%",
+                    backgroundColor: "red",
+                    color: "white",
+                  }}
+                  onClick={decNum}
+                >
+                  -
+                </Button>
+              </>
+            )}
+            {!num > 0 && (
+              <>
+                <Button
+                  style={{
+                    fontSize: "30px",
+                    fontWeight: "500",
+                    marginTop: "5%",
+                    backgroundColor: "lightgray",
+                  }}
+                  onClick={decNum}
+                >
+                  -
+                </Button>
+              </>
+            )}
           </div>
         </CardContent>
       </Card>
