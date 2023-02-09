@@ -104,7 +104,22 @@ const DnavIndex = ({orderDetails}) => {
                           return null;
                         }
                       })}
-
+                    <Button
+                      style={{
+                        backgroundColor: "blue",
+                        color: "white",
+                      }}
+                    >
+                      +
+                    </Button>
+                    <Button
+                      style={{
+                        backgroundColor: "red",
+                        color: "white",
+                      }}
+                    >
+                      -
+                    </Button>
                     <hr />
                     <div style={{justifyContent: "space-between"}}>
                       <span>{"Total Price"}:</span>
